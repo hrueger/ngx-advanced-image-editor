@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, ViewEncapsulation, Input } from '@angular/core';
 import TuiEditor from "tui-image-editor";
 
 @Component({
@@ -12,22 +12,19 @@ import TuiEditor from "tui-image-editor";
 })
 export class NgxAdvancedImageEditorComponent {
   @ViewChild("tuiEditor") private editor: ElementRef;
-  public editorInstance: TuiEditor;
-  public options: any = {
+  @Input() public options: any = {
     usageStatistics: false,
     includeUI: {
       menuBarPosition: 'bottom',
-      hideHeader: true,
     },
   }
+  public editorInstance: TuiEditor;
 
   public ngOnInit() {
-    console.log("Now Inited!")
+    //
   }
 
   public ngAfterViewInit(): void {
-    console.log(this.editor);
     this.editorInstance = new TuiEditor(this.editor.nativeElement, this.options);
-    console.log(this.editorInstance);
   }
 }
