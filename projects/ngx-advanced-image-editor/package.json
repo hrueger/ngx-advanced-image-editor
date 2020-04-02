@@ -1,0 +1,17 @@
+{
+  "name": "ngx-advanced-image-editor",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "tslib": "^1.10.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hrueger/ngx-advanced-image-editor"
+  },
+  "dependencies": {
+    "tui-image-editor": "^3.9.0"
+  }
+}
